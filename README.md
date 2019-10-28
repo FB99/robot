@@ -1,6 +1,8 @@
 # robot
+
 ## angleListDemo.py
 ### 给出坐标，然后调用方法，得到各手臂关节角度，执行移动
+
 ##  robotDemo.py
 ### 图形化界面手动控制机械手
 
