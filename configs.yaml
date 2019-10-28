@@ -1,0 +1,52 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
+name: "debug_log"
+
+
+# 录音时间
+RECORD_SECONDS : 2
+
+# 文件参数
+wave_output_filename: "./api/AipSpeech/tempFile/temp.wav"
+
+# 声音模板路径
+default_wave:
+  wave_start: "./api/AipSpeech/template/start.wav"
+  wave_exit: "./api/AipSpeech/template/exit.wav"
+  wave_di: "./api/AipSpeech/template/di.wav"
+  wave_voiceFailed: "./api/AipSpeech/template/voiceFailed.wav"
+  wave_cmdFailed: "./api/AipSpeech/template/cmdFailed.wav"
+
+  wave_dgstop: "./api/AipSpeech/template/dgstop.wav"
+  wave_dgforward: "./api/AipSpeech/template/dgforward.wav"
+  wave_dgback: "./api/AipSpeech/template/dgback.wav"
+  wave_dgright: "./api/AipSpeech/template/dgright.wav"
+  wave_dgleft: "./api/AipSpeech/template/dgleft.wav"
+
+
+# 麦克风设备参数
+device_para:
+  CHUNK : 1024
+  FORMAT : 8    # pyaudio.paInt16
+  CHANNELS : 2  #
+  RATE : 44100
+
+# 百度API目标参数
+aipSpeech_wav_para:
+  RATE: 16000 # 百度支持8000和16000
+  CHANNELS : 1
+  SAMPWIDTH : 2
+  FORMAT : 8
+  # 文件格式
+  SPEECH_FILE_STYLE: "wav"
+  # 翻译语言，1536为普通话
+  dev_pid: '1536'
+
+
+# 百度API的ID
+baidu_token:
+  APP_ID : '11007910'
+  API_KEY : '12qM5dSSVuGMk4WGGAHD1UF8'
+  SECRET_KEY : '7t3rmr3Vs0GNe2MdIEYAf6DlVLk4BF2I'
+
