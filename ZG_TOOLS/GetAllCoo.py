@@ -12,7 +12,7 @@ def get_allCoo(cos_theta, p):
     all_Z = []
     all_Y = []
     all_X = []
-    # 濡傛灉浜屾鏂圭▼浜屾椤圭郴鏁颁负0
+
     if np.abs(np.abs(p[0]) - 1) < eps:
         x = cos_theta
         #for y in range(, 0.001, 0):
@@ -31,10 +31,10 @@ def get_allCoo(cos_theta, p):
             all_Y.append(sub_Y)
             all_Z.append(sub_Z)
             y += 0.001
-    # 濡傛灉浜屾椤圭郴鏁颁笉涓�0
+
     else:
         delta2 = np.sqrt((1 - p[0] ** 2) * (1 - cos_theta ** 2))
-        #for x in range(, 0.001, ):
+        
         x = p[0] * cos_theta - delta2
         while x < p[0] * cos_theta + delta2:
             delta1 = np.sqrt(delta2 ** 2 - (x - p[0] * cos_theta) ** 2)
