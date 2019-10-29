@@ -74,6 +74,7 @@ def get_q123(q4, R4):
     print("NOOOOO solution")
     return None, None, None
 
+#先通过get_allCoo方法计算q4，然后计算q1,q2,q3，最后计算q5,q6
 def get_bag(p6):
     r = p6 - p1
     C = np.linalg.norm(r)
