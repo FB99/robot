@@ -83,6 +83,7 @@ class Controller(QTabWidget):
         self.bt_L4 = QPushButton("L4")
         self.bt_L5 = QPushButton("L5")
         self.bt_L6 = QPushButton("L6")
+        
         self.bt_LF1 = QPushButton("LF1")
         self.bt_LF2 = QPushButton("LF2")
         self.bt_LF3 = QPushButton("LF3")
@@ -113,6 +114,7 @@ class Controller(QTabWidget):
         self.bt_R4 = QPushButton("R4")
         self.bt_R5 = QPushButton("R5")
         self.bt_R6 = QPushButton("R6")
+        
         self.bt_RF1 = QPushButton("RF1")
         self.bt_RF2 = QPushButton("RF2")
         self.bt_RF3 = QPushButton("RF3")
@@ -234,6 +236,7 @@ class Controller(QTabWidget):
         self.bt_L4.clicked.connect(lambda: self.arm_control("L4"))
         self.bt_L5.clicked.connect(lambda: self.arm_control("L5"))
         self.bt_L6.clicked.connect(lambda: self.arm_control("L6"))
+        
         self.bt_LF1.clicked.connect(lambda: self.arm_control("LF1"))
         self.bt_LF2.clicked.connect(lambda: self.arm_control("LF2"))
         self.bt_LF3.clicked.connect(lambda: self.arm_control("LF3"))
@@ -246,6 +249,7 @@ class Controller(QTabWidget):
         self.bt_R4.clicked.connect(lambda: self.arm_control("R4"))
         self.bt_R5.clicked.connect(lambda: self.arm_control("R5"))
         self.bt_R6.clicked.connect(lambda: self.arm_control("R6"))
+        
         self.bt_RF1.clicked.connect(lambda: self.arm_control("RF1"))
         self.bt_RF2.clicked.connect(lambda: self.arm_control("RF2"))
         self.bt_RF3.clicked.connect(lambda: self.arm_control("RF3"))
@@ -254,7 +258,6 @@ class Controller(QTabWidget):
 
       #   self.bt_stop.clicked.connect(lambda: self.dg_stop())
         self.bt_reset.clicked.connect(lambda: self.reset_robot())
-
 
     # 定义具体操纵功能
 
@@ -265,20 +268,14 @@ class Controller(QTabWidget):
         tempstr = ""
         for key, value in self.action_seq.items():
             tempstr = tempstr + re_arm[key] + ":" + str(value) + ","
-
         self.browser_log.append(tempstr)
 
     def reset_robot(self):
         self.arm.CMD_reset()
         self.action_seq = deepcopy(defaultAction)
-
         self.browser_log.append("复位")
 
-
-
     ###############################################################
-
-
 
 
 if __name__ == "__main__":
