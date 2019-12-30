@@ -1,10 +1,13 @@
 from .GetAllCoo import get_allCoo
 import numpy as np
 
+#L1,L2分别为大臂，小臂的长度；D为肩宽，H为垂直方向的距离
+
 L1 = 170
 L2 = 170
 D = 165
 H = 0
+#p1 为肩膀的坐标
 p1 = np.array([0, -D, -H])
 orient = np.array([-1, 0, 0])
 #坐标转换
