@@ -8,7 +8,6 @@ import sys
 from hdfs.client import Client
 import h5py
 
-
 class Model():
     def __init__(self):
         self.model = None
